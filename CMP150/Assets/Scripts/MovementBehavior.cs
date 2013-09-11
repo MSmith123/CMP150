@@ -12,12 +12,37 @@ public class CharacterControls
 
 }
 
+/*
+public class MyDerivedMono : MonoBehaviour
+{
+    public float XPos
+    {
+        get { return transform.position.x;}
+        set
+        {
+            Vector3 myPos = transform.position;
+            myPos.x = value;
+            transform.position = myPos;
+        }
+    }
+    public float YPos
+    {
+        get { return transform.position.y;}
+        set 
+        {
+            Vector3 myPos = transform.position;
+            myPos.y = value;
+            transform.position = myPos;
+        }
+    }
+}
+*/
 public class MovementBehavior : MonoBehaviour 
 {
 
 
     public float MoveSpeed = 5f;
-    public CharacterControls = new CharacterControls();
+    public CharacterControls Controls = new CharacterControls();
     
    
     private float trueSpeed
@@ -34,22 +59,23 @@ public class MovementBehavior : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
-        if (Input.GetKey(MoveForward.W))
+
+        if (Input.GetKey(Controls.MoveForward))
         {
             transform.Translate(transform.forward * trueSpeed);
         }
 
-        if(Input.GetKey(MoveBack.S))
+        if(Input.GetKey(Controls.MoveBack))
         {
-            transform.Translate(transform.backward * trueSpeed);
+            transform.Translate(transform.forward * -1 * trueSpeed);
         }
 
-        if(Input.GetKey(MoveLeft.A))
+        if(Input.GetKey(Controls.MoveLeft))
         {
-            transform.Translate(transform.left * trueSpeed);
+            transform.Translate(transform.right * -1 * trueSpeed);
         }
 	
-        if(Input.GetKey(MoveRight.D))
+        if(Input.GetKey(Controls.MoveRight))
         {
             transform.Translate(transform.right * trueSpeed);
         }

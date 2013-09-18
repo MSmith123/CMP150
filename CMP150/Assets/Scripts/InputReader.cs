@@ -4,6 +4,7 @@ using System.Collections;
 public class InputReader : MonoBehaviour {
 
     public Control ControlInput;
+    public float MoveSpeed = 5f;
 
 	// Use this for initialization
 	void Start () {

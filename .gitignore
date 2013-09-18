@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.csproj
 *.sln
 *.unityproj
@@ -5,3 +6,12 @@
 CMP150/Library/*
 CMP150/Temp/*
 CMP150/obj/*
+=======
+/CMP150/*.csproj
+*.sln
+*.unityproj
+*.suo
+/CMP150/Library/*
+/CMP150/Temp/*
+/CMP150/obj/*
+>>>>>>> e50d9772235b2e2cf3be988125801f9c0467cc50
